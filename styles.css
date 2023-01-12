@@ -1,0 +1,18 @@
+body{
+  font-family: 'Sofia Sans', sans-serif;
+  background: #F3F5FC;
+}
+
+textarea{
+  color: #0A3871;
+}
+
+.encriptar{
+  background: #0A3871;
+  color: #FFF;
+}
+
+.desencriptar{
+  background: #D8DFE8;
+  color: #0A3871;
+}
