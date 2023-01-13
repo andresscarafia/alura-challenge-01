@@ -7,6 +7,12 @@ textarea{
   color: #0A3871;
 }
 
+input{
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+}
 .encriptar{
   background: #0A3871;
   color: #FFF;

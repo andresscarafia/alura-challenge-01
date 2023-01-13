@@ -51,6 +51,7 @@ function desencriptar(texto) {
   parseInt("numero")
 
   document.querySelector(css-selector)
+  document.getElementById()
 
   // Aquí viene la llamada a la función con el evento onclick
     pantalla.onclick = mostrarMensaje;
@@ -65,8 +66,19 @@ function desencriptar(texto) {
   input.value = ""; vacia el campo del input
 
   pantalla.onclick = cambiarColor;
-    pantalla.onmousemove = dibujarCirculo;
+    pantalla.onmousemove = dibujarCirculo;x
     pantalla.onmousedown = habilitarDibujar;
     pantalla.onmouseup = deshabilitarDibujar;
+
+
+    function exhibirAlerta(evento) {
+   		var x = evento.pageX - pantalla.offsetLeft;
+   		var y = evento.pageY - pantalla.offsetTop;
+   		console.log(evento);
+	   	alert("Ud. hizo un click en (" + x + "," + y +")");
+   	}
+    pantalla.onclick = exhibirAlerta;
+
+    texto = document.querySelector("textarea").value; // consigue el texto del textarea
 
 */

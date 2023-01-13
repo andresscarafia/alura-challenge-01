@@ -12,18 +12,22 @@
 </head>
 <body>
   <img src="images/logo.png" alt="Logo de Alura en color azul">
-  <textarea class="texto-a-encriptar" id="" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
-  <p><img src="images/exclamation-mark-in-a-circle.png" alt="Signo de exclamación final"> Sólo letras minúsculas y sin acentos. No se permiten caracteres especiales</p>
-  <button class="encriptar">Encriptar</button>
-  <button class="desencriptar">Desencriptar</button>
+  <form>
+    <textarea id="texto-a-encriptar" id="" cols="60" rows="30" placeholder="Ingrese el texto aquí" required></textarea>
+    <p><img src="images/exclamation-mark-in-a-circle.png" alt="Signo de exclamación final"> Sólo letras minúsculas y sin acentos. No se permiten caracteres especiales</p>
+    <input type="submit" value="Encriptar" class="encriptar">
+    <input type="submit" value="Desencriptar" class="desencriptar">
+    <!--<button class="encriptar">Encriptar</button>
+    <button class="desencriptar">Desencriptar</button>-->
+  </form>
   <div id="texto-encriptado">
     <img src="images/persona.png" alt="Imagen de una persona mirando un diamante con una lupa">
     <h2>Ningún mensaje fue encontrado</h2>
     <p>Ingresa el texto que desees encriptar o desencriptar</p>
   </div>
-  <button>Copiar</button>
+  <button class="copiar">Copiar</button>
   <footer>
-    Copyright - Andrés Gastón Scarafía 2023 - <a href="https://github.com/andresscarafia">Github</a> - <a href="https://www.linkedin.com/in/andres-scarafia/">Linkedin</a>
+    Copyright - &copy Andrés Gastón Scarafía 2023 - <a href="https://github.com/andresscarafia">Github</a> - <a href="https://www.linkedin.com/in/andres-scarafia/">Linkedin</a>
   </footer>
 </body>
 </html>
