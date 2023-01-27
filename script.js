@@ -1,22 +1,53 @@
+const textArea =  document.querySelector("textarea");
+const mensaje = document.querySelector("#mensaje");
+
+function btnEncriptar() {
+    const textoEncriptado = encriptar(textArea.value);
+    mensaje.value = textoEncriptado;
+    textArea.value = "";
+    mensaje.style.backgroundImage = "none";
+}
+
+function btnDesencriptar() {
+    const textoEncriptado = desencriptar(textArea.value);
+    mensaje.value = textoEncriptado;
+    textArea.value = "";
+    mensaje.style.backgroundImage = "none";
+}
+
+function btnCopiar() {
+    const textoCopiado = mensaje.value;
+    alert("El texto ha sido copiado");
+    textArea.value = textoCopiado;
+    mensaje.value = "";
+    mensaje.style.backgroundImage = "url(images/persona.png)";
+}
+
 function encriptar(texto) {
-    console.log("ENCRIPTAR")
+    texto = texto.toLowerCase();
+    console.log(texto);
     let textoEncriptado = ""
     for (let i = 0; i < texto.length; i++) {
-        if (texto[i] == "a") {
-            textoEncriptado += "ai";
-        } else if(texto[i] == "e") {
-            textoEncriptado += "enter";
-        } else if(texto[i] == "i") {
-            textoEncriptado += "imes";
-        } else if(texto[i] == "o") {
-            textoEncriptado += "ober";
-        } else if(texto[i] == "u") {
-            textoEncriptado += "ufat";
+        if ("abcdefghijklmnñopqrstuvwxyz ".includes(texto[i])){
+            if (texto[i] == "a") {
+                textoEncriptado += "ai";
+            } else if(texto[i] == "e") {
+                textoEncriptado += "enter";
+            } else if(texto[i] == "i") {
+                textoEncriptado += "imes";
+            } else if(texto[i] == "o") {
+                textoEncriptado += "ober";
+            } else if(texto[i] == "u") {
+                textoEncriptado += "ufat";
+            } else {
+                textoEncriptado += texto[i];
+            }
         } else {
-            textoEncriptado += texto[i];
+            alert("Error! Solo se permiten letras sin caracteres especiales");
+            break;
         }
     }
-    return textoEncriptado
+    return textoEncriptado;
 }
 
 function desencriptar(texto) {
@@ -43,42 +74,3 @@ function desencriptar(texto) {
     }
     return textoDesencriptado;
 }
-
-
-/* Código relevante de JS:
-  document.write(mensaje)
-
-  parseInt("numero")
-
-  document.querySelector(css-selector)
-  document.getElementById()
-
-  // Aquí viene la llamada a la función con el evento onclick
-    pantalla.onclick = mostrarMensaje;
-    button.onclick = nombreFuncion;
-
-    var button = document.querySelector("button");
-	  button.onclick = verificar;
-
-
-  var input = document.querySelector("input");
-	input.focus(); mueve el cursor al input
-  input.value = ""; vacia el campo del input
-
-  pantalla.onclick = cambiarColor;
-    pantalla.onmousemove = dibujarCirculo;x
-    pantalla.onmousedown = habilitarDibujar;
-    pantalla.onmouseup = deshabilitarDibujar;
-
-
-    function exhibirAlerta(evento) {
-   		var x = evento.pageX - pantalla.offsetLeft;
-   		var y = evento.pageY - pantalla.offsetTop;
-   		console.log(evento);
-	   	alert("Ud. hizo un click en (" + x + "," + y +")");
-   	}
-    pantalla.onclick = exhibirAlerta;
-
-    texto = document.querySelector("textarea").value; // consigue el texto del textarea
-
-*/
