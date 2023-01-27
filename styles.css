@@ -1,18 +1,27 @@
 body{
   font-family: 'Sofia Sans', sans-serif;
+  background: #e7eaf6;
+  color: #113f67;
+}
+
+main{
+  display: flex;
+}
+textarea{
+  color: #0A3871;
+  resize: none;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 10px;
   background: #F3F5FC;
 }
 
-textarea{
-  color: #0A3871;
+#mensaje{
+  background-image: url(images/persona.png);
+  background-repeat: no-repeat;
 }
 
-input{
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 5px;
-}
 .encriptar{
   background: #0A3871;
   color: #FFF;
@@ -21,4 +30,11 @@ input{
 .desencriptar{
   background: #D8DFE8;
   color: #0A3871;
+}
+
+footer{
+  text-align: center;
+  background-color: #a2a8d3;
+  padding: 10px;
+  margin-top: 1em;
 }
