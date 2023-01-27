@@ -4,11 +4,10 @@ const mensaje = document.querySelector("#mensaje");
 function btnEncriptar() {
     const textoEncriptado = encriptar(textArea.value);
     mensaje.value = textoEncriptado;
-    if (textArea.value != "") {
+    if (textArea.value != "" && mensaje.value != "") {
         textArea.value = "";
         mensaje.style.backgroundImage = "none";
     }
-    
 }
 
 function btnDesencriptar() {
@@ -28,29 +27,28 @@ function btnCopiar() {
 
 function encriptar(texto) {
     texto = texto.toLowerCase();
-    console.log(texto);
-    let textoEncriptado = ""
+    let textoNuevo = ""
     for (let i = 0; i < texto.length; i++) {
         if ("abcdefghijklmnñopqrstuvwxyz ".includes(texto[i])){
             if (texto[i] == "a") {
-                textoEncriptado += "ai";
+                textoNuevo += "ai";
             } else if(texto[i] == "e") {
-                textoEncriptado += "enter";
+                textoNuevo += "enter";
             } else if(texto[i] == "i") {
-                textoEncriptado += "imes";
+                textoNuevo += "imes";
             } else if(texto[i] == "o") {
-                textoEncriptado += "ober";
+                textoNuevo += "ober";
             } else if(texto[i] == "u") {
-                textoEncriptado += "ufat";
+                textoNuevo += "ufat";
             } else {
-                textoEncriptado += texto[i];
+                textoNuevo += texto[i];
             }
         } else {
             alert("Error! Solo se permiten letras sin caracteres especiales");
-            break;
+            return "";
         }
     }
-    return textoEncriptado;
+    return textoNuevo;
 }
 
 function desencriptar(texto) {
