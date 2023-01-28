@@ -2,10 +2,26 @@ body{
   font-family: 'Sofia Sans', sans-serif;
   background: #e7eaf6;
   color: #113f67;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 0%;
+}
+
+header{
+  margin-top: 1em;
+
 }
 
 main{
   display: flex;
+}
+
+div{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 textarea{
@@ -16,11 +32,24 @@ textarea{
   border-radius: 20px;
   padding: 10px;
   background: #F3F5FC;
+  margin: 0 auto;
 }
 
-#mensaje{
-  background-image: url(images/persona.png);
-  background-repeat: no-repeat;
+.botones{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.botones>button{
+  flex: 0 0 1;
+  padding: 0.75em 2.5em;
+  border-radius: 8px;
+  border: none;
+}
+
+.botones>button:hover{
+  border:  solid black 0.5px;
 }
 
 .encriptar{
@@ -33,9 +62,15 @@ textarea{
   color: #0A3871;
 }
 
+#mensaje{
+  background-image: url(images/persona.png);
+  background-repeat: no-repeat;
+}
+
 footer{
   text-align: center;
   background-color: #a2a8d3;
   padding: 10px;
   margin-top: 1em;
+  flex: 1;
 }
