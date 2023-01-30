@@ -16,16 +16,16 @@
     <img src="images/logo.png" alt="Logo de Alura en color azul" class="logo">
   </header>
   <main>
-    <div>
-      <textarea id="texto-a-encriptar" cols="50" rows="30" placeholder="Ingrese el texto aquí" required></textarea>
+    <div class="texto">
+      <textarea id="texto-a-encriptar" cols="30" rows="18" placeholder="Ingrese el texto aquí" required></textarea>
       <p><img src="images/exclamation-mark-in-a-circle.png" alt="Signo de exclamación final"> Sólo letras minúsculas y sin acentos. No se permiten caracteres especiales</p>
       <div class="botones">
         <button class="encriptar" onclick="btnEncriptar()">Encriptar</button>
         <button class="desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
       </div>
     </div>
-    <div>
-      <textarea id="mensaje" cols="40" rows="30" disabled></textarea>
+    <div class="mensaje">
+      <textarea id="mensaje" cols="20" rows="18" disabled></textarea>
       <h2>Ningún mensaje fue encontrado</h2>
       <p>Ingresa el texto que desees encriptar o desencriptar</p>
       <button class="copiar" onclick="btnCopiar()">Copiar</button>

@@ -5,17 +5,20 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  height: 0%;
+  justify-content: center;
+  height: 100%;
 }
 
 header{
-  margin-top: 1em;
-
+  margin: 1rem;
+  margin-right: auto;
+  margin-left: 20rem;
 }
 
 main{
   display: flex;
+  flex: 1;
+  height: 100%;
 }
 
 div{
@@ -24,15 +27,25 @@ div{
   flex-direction: column;
 }
 
+.texto,
+.mensaje{
+  padding: 1em 5em;
+}
+
 textarea{
   color: #0A3871;
   resize: none;
   border: none;
   outline: none;
   border-radius: 20px;
-  padding: 10px;
   background: #F3F5FC;
   margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.texto p{
+  padding: 0 1em;
+  font-size: 0.9rem;
 }
 
 .botones{
@@ -65,12 +78,31 @@ textarea{
 #mensaje{
   background-image: url(images/persona.png);
   background-repeat: no-repeat;
+  background-position: center;
+}
+
+.copiar{
+  padding: 0.75em 2.5em;
+  border-radius: 8px;
+  border: none;
+  width: 10em;
+  align-self: center;
+}
+
+.mensaje>h2,
+.mensaje>p{
+  align-self: center;
+}
+.copiar:hover{
+  border:  solid black 0.5px;
 }
 
 footer{
   text-align: center;
   background-color: #a2a8d3;
-  padding: 10px;
+  padding: 1em;
+  padding-left: auto;
+  padding-right: auto;
   margin-top: 1em;
-  flex: 1;
+  align-self: stretch;
 }
